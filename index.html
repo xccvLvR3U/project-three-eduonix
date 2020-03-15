@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Three For Eduonix </title>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .btn {
+            background-color: #ff0000;
+            padding: 5rem;
+            font-size: 3em;
+            font-family: monospace, sans-serif;
+            font-weight: 800;
+            color: #fffff0;
+            margin: 2rem;
+            outline: none;
+            border: none;
+            border-radius: 1em;
+        }
+        
+        .btn:hover {
+            background-color: #ec3434;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button id="btnBckChanger" type="button" class="btn">Change My Color</button>
+        <button id="textChanger" type="button" class="btn ">Change My Text</button>
+        <button type="button" class=" btn" onclick="changeBodyBackgroundColor('#00ff00');">Yellow</button>
+    </div>
+
+
+
+    <script>
+        const btnBckChanger = document.querySelector('#btnBckChanger');
+        const textChanger = document.querySelector('#textChanger');
+        const backgroundChanger = document.querySelector('#backgroundChanger');
+        const body = document.getElementsByTagName('body')
+
+        btnBckChanger.addEventListener('click', () => btnBckChanger.style.backgroundColor = '#00ff00')
+        textChanger.addEventListener('click', () => textChanger.style.color = '#00ff00')
+
+
+        function changeBodyBackgroundColor(color) {
+            document.body.style.background = color;
+        }
+    </script>
+</body>
+
+</html>
